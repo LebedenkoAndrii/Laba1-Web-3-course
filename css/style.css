@@ -1,0 +1,120 @@
+@import "./css/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto:wght@300;400;700&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Noto Sans JP', sans-serif; */
+
+body {
+  background-color: #14213d;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+/* Годинник */
+
+.clock {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  justify-content: center;
+  align-self: center;
+}
+
+/* Календар */
+
+.calendar {
+  width: 300px;
+}
+
+.calendar h2 {
+  background-color: #fca311;
+  color: white;
+  padding: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.current-day {
+  background-color: #fca311;
+  color: white;
+}
+
+/* Resume */
+
+.resume {
+  margin: 30px 0;
+}
+.resume p {
+  font-size: 18px;
+  text-align: left;
+}
+.resume li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* ДІАГРАМА */
+
+.chart-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+h2 {
+  background-color: #fca311;
+  color: white;
+  padding: 10px;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 300px;
+}
+
+.bar {
+  width: 20px;
+  background-color: #fca311;
+  animation: expandBar 1.5s ease-in-out forwards;
+}
+
+@keyframes expandBar {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: attr(style);
+  }
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
